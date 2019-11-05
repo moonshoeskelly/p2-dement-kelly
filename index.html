@@ -4,24 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--Futura Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/njr1itu.css">
+
     <title>Project 2</title>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <a href="index.html"><img src="images/goodwill_logo.png" title="main logo" alt="main logo" /></a>
-      <a href="index.html"><img src="images/gwCFonly.png" title="sub logo" alt="sub logo" /></a>
-      <nav>
-        <ul>
-          <li>Donate</li>
-          <li>Volunteer</li>
-          <li>Locations</li>
-          <li>Shop</li>
-          <li>About</li>
-        </ul>
-      </nav>
+      <section class="navigation-line">
+        <div id="logos">
+          <a href="index.html"><img id ="main-logo" src="images/goodwill_logo.png" title="main logo" alt="main logo" /></a>
+          <a href="index.html"><img id= "cf-logo" src="images/gwCFonly.png" title="sub logo" alt="sub logo" /></a>
+        </div>
+        <nav>
+          <button id="hamburger">&#9776;</button>
+          <div class="menu">
+            <ul>
+              <li>Donate</li>
+              <li>Volunteer</li>
+              <li>Locations</li>
+              <li>Shop</li>
+              <li>About</li>
+            </ul>
+          </div>
+        </nav>
+      </section>
       <h1>Serving the community for 60 years</h1>
-      <img src="images/storeGW.png" title="goodwill store" alt="goodwill store" />
+      <img id="full-store" src="images/storeGW.png" title="goodwill store" alt="goodwill store" />
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </header>
 
@@ -30,23 +41,23 @@
       <div class="line"></div>
       <section class="main-contents">
         <article class="main-donate">
-          <button>Donate</button>
+          <button class="button">Donate</button>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <img src="images/donate1.jpg" title="man with donations" alt="man with donations" />
+          <img class="main-pics" src="images/donate1.jpg" title="man with donations" alt="man with donations" />
         </article>
         <article class="main-volunteer">
-          <button>Volunteer</button>
+          <button class="button">Volunteer</button>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <img src="images/volunteer1.jpg" title="group of volunteers" alt="group of volunteers" />
+          <img class="main-pics" src="images/volunteer1.jpg" title="group of volunteers" alt="group of volunteers" />
         </article>
         <article class="main-locations">
-          <button>Locations</button>
+          <button class="button">Locations</button>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <img src="images/location1.jpg" title="happy volunteers" alt="happy volunteers" />
+          <img class="main-pics" src="images/location1.jpg" title="happy volunteers" alt="happy volunteers" />
         </article>
       </section>
       <div class="line"></div>
-      <article>
+      <article class="mission">
         <h2>Our Mission and Vision</h2>
         <p>Our Mission is Building Live that Works. Our vision is to be satisfied with our work only when every person in our community that we are privileged to serve has an opportunity to develop to his or her fullest potential and enjoy a maximum of abundant living.</p>
       </article>
