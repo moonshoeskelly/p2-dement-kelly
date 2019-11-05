@@ -101,10 +101,26 @@
   font-weight: 400;
   font-style: normal;
 }
+.menu ul a {
+  color: #000;
+}
+.menu a:hover {
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.button:hover {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 .show-mobile-menu {
   height: 340px;
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
+}
+a {
+  text-decoration: none;
 }
 p {
   font-family: futura-pt, sans-serif;
@@ -136,7 +152,7 @@ h1 {
 }
 #full-store {
   width: 100%;
-  max-width: 580px;
+  max-width: 600px;
   margin: 0 auto 6px;
   display: block;
 }
@@ -257,12 +273,13 @@ h2 {
     border-left: 1px solid black;
     height: 25px;
     font-size: 1rem;
+    padding: 0 11px;
   }
   #hamburger {
     display: none;
   }
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
   h2 {
     font-size: 1.9rem;
@@ -276,5 +293,15 @@ h2 {
   .mission,
   header p {
     padding: 5px 23%;
+  }
+}
+@media (min-width: 830px) {
+  .menu {
+    width: 430px;
+  }
+  .menu ul li {
+    width: 20%;
+    height: 25px;
+    font-size: 1.3rem;
   }
 }
