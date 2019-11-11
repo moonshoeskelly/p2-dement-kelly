@@ -6,3 +6,15 @@ function toggleMenu() {
 }
 
 hamburgerButton.addEventListener('click', toggleMenu);
+
+
+var slideOutAd = document.getElementById('slideout-ad');
+
+
+// slide out after 3 seconds
+function sideAd () {
+  slideOutAd.classList.remove('hide');
+  slideOutAd.classList.add('show');
+};
+
+h3.addEventListener('click', sideAd);

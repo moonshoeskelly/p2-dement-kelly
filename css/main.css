@@ -156,6 +156,28 @@ h1 {
   margin: 0 auto 6px;
   display: block;
 }
+#slideout-ad {
+  height: 200px;
+  max-width: 320px;
+  background-color: #efefef;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: 36px;
+}
+.show {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #11a57c;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+.hide {
+  width: 0;
+  padding: 0;
+  border: 0;
+}
 header p {
   padding: 5px 8%;
   text-align: center;
