@@ -211,7 +211,7 @@ header p {
 .main-volunteer p,
 .main-locations p {
   text-align: left;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .button {
   border: 2px solid #3d93d0;
@@ -327,7 +327,17 @@ h2 {
     font-size: 1.3rem;
   }
 }
-#vol-title {
+i {
+  border: solid #01529c;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#sub-title {
   width: 83%;
   max-width: 500px;
   margin: 0 auto;
@@ -337,7 +347,7 @@ h2 {
   text-align: center;
   padding-bottom: 10px;
 }
-.vol-images {
+.sub-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
