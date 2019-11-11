@@ -17,12 +17,12 @@ var slideOutAd = document.getElementById('slideout-ad');
 //-----------------SLIDE OUT AD--------------------//
 
 // slide out after 3 seconds
-function sideAd () {
-  slideOutAd.classList.remove('hide');
-  slideOutAd.classList.add('show');
-};
-
-h3.addEventListener('click', sideAd);
+// function sideAd () {
+//   slideOutAd.classList.remove('hide');
+//   slideOutAd.classList.add('show');
+// };
+//
+// h3.addEventListener('click', sideAd);
 
 
 
@@ -37,7 +37,8 @@ var accordionDescriptions = document.querySelectorAll('#accordion .accordion-des
 function expandAccordionDescription () {
 
   var box = this.nextElementSibling;
-  var toggleIndicator = this.childNodes[3];
+  var toggleIndicator = this.childNodes[1];
+  console.log(toggleIndicator);
 
   //If box is open, close box on click and change indicator
   if (box.classList.contains('active')) {
@@ -49,7 +50,7 @@ function expandAccordionDescription () {
   else {
     for (var i = 0; i < accordionHeaders.length; i++) {
       accordionDescriptions[i].classList.remove('active');
-      accordionHeaders[i].childNodes[3].innerHTML = '+';
+      accordionHeaders[i].childNodes[1].innerHTML = '+';
     }
 
   //Then open clicked box and change indicator

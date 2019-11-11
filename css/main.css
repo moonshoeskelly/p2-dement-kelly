@@ -327,60 +327,149 @@ h2 {
     font-size: 1.3rem;
   }
 }
-#accordion {
-  width: 95%;
-  margin: auto;
-  margin-top: 100px;
+#vol-title {
+  width: 83%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  padding-bottom: 10px;
 }
-.accordion-headers {
-  height: 60px;
+.vol-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #740001;
-  margin: 10px auto;
-  color: #eeba30;
-  padding: 0 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-family: futura-pt, sans-serif;
-  font-weight: 400;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 5px;
+}
+.volunteering {
+  padding-bottom: 10px;
+}
+#vol-img-1 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+#vol-img-2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+#vol-img-3 {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.volunteering img {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 5px 0 5px;
+}
+.long-img {
+  max-width: 220px;
+}
+.short-img {
+  max-width: 290px;
+}
+#vol-main-h2 {
+  color: #595959;
+  width: 83%;
+  max-width: 630px;
+  margin: 0 auto;
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
+#accordion {
+  width: 95%;
+  margin: auto;
+}
+.accordion-headers {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+  color: #595959;
+  padding: 0 20px;
+}
 .accordion-headers h3 {
-  font-size: 20px;
+  font-size: 1.2rem;
+  padding-left: 5%;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 .toggle-indicator {
-  font-size: 40px;
+  font-size: 2.5rem;
+  color: #01529c;
 }
 .accordion-description {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   padding: 0px 20px;
-  background-color: #d3a625;
-  color: #740001;
-  -webkit-transition: max-height 1s;
-  transition: max-height 1s;
+  color: #595959;
+  -webkit-transition: height 1s;
+  transition: height 1s;
   font-family: futura-pt, sans-serif;
   font-weight: 300;
   font-style: normal;
   line-height: 28px;
+  font-size: 1rem;
 }
 .active {
-  max-height: 1000px;
+  height: 180px;
   padding: 5px 20px;
-  -webkit-transition: max-height 2s;
-  transition: max-height 2s;
+  -webkit-transition: height 2s;
+  transition: height 2s;
+}
+@media (min-width: 530px) {
+  #vol-img-2 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  #vol-img-3 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media (min-width: 740px) {
+  .volunteering img {
+    padding: 0;
+  }
+  #vol-img-2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #vol-img-3 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 @media (min-width: 768px) {
   #accordion {
     width: 60%;
   }
   .accordion-headers h3 {
-    font-size: 30px;
+    font-size: 1.3rem;
   }
 }
