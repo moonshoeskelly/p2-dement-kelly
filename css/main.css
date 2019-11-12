@@ -387,11 +387,10 @@ h2 {
   width: 100%;
   max-width: 100px;
 }
-.select-city a {
-  font-family: futura-pt, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  width: 100%;
+.select-city select {
+  width: 100px;
+  height: 20px;
+  font-size: .8rem;
 }
 .select-city,
 .weather-box {
@@ -414,6 +413,9 @@ i {
 }
 .weather-box li {
   padding: 5px 0;
+}
+.weather-box li span {
+  color: #01529c;
 }
 .down {
   transform: rotate(45deg);
