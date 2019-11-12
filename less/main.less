@@ -320,11 +320,81 @@ h2 {
 
 //Donate
 
+.donating {
+  padding: 5px 1%;
+}
+
+.shorter-img {
+  max-width: 238px;
+}
+
+#don-main-h2 {
+  color: #595959;
+  max-width: 630px;
+  margin: 0 auto;
+  .futura-condensed-medium;
+}
+
+.donate-main {
+  width: 90%;
+  max-width: 600px;
+  padding-left: 5%;
+}
+
+.donation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  div {
+    width: 100%;
+    max-width: 350px;
+    .futura-light;
+    color: #595959;
+    margin: 10px 1%;
+    padding: 0 5%;
+    ul {
+      list-style-type: none;
+    }
+  }
+}
+
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-city {
+  border: solid 1px #01529c;
+  width: 100%;
+  max-width: 100px;
+  a {
+    .futura-book;
+    width: 100%;
+  }
+}
+
+.select-city, .weather-box {
+  display: flex;
+  padding: 10px 5%;
+  margin: 10px 5%;
+}
+
 i {
   border: solid #01529c;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+  margin-left: 15%;
+}
+
+.weather-box {
+  width: 100%;
+  max-width: 200px;
+  li {
+    padding: 5px 0;
+  }
 }
 
 .down {
@@ -332,6 +402,12 @@ i {
   -webkit-transform: rotate(45deg);
 }
 
+.weather-box {
+  border: solid 1px #01529c;
+  ul {
+    list-style-type: none;
+  }
+}
 //Volunteer
 
 #sub-title {
@@ -353,18 +429,6 @@ i {
 
 .volunteering {
   padding-bottom: 10px;
-}
-
-#vol-img-1 {
-  order: 1;
-}
-
-#vol-img-2 {
-  order: 2;
-}
-
-#vol-img-3 {
-  order: 3;
 }
 
 .volunteering img {
@@ -452,6 +516,12 @@ i {
   }
   #vol-img-3 {
     order: 3;
+  }
+}
+
+@media (min-width: 750px) {
+  .donating {
+    padding: 0;
   }
 }
 

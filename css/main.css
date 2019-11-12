@@ -327,15 +327,103 @@ h2 {
     font-size: 1.3rem;
   }
 }
+.donating {
+  padding: 5px 1%;
+}
+.shorter-img {
+  max-width: 238px;
+}
+#don-main-h2 {
+  color: #595959;
+  max-width: 630px;
+  margin: 0 auto;
+  font-family: futura-pt-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.donate-main {
+  width: 90%;
+  max-width: 600px;
+  padding-left: 5%;
+}
+.donation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.donation-list div {
+  width: 100%;
+  max-width: 350px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #595959;
+  margin: 10px 1%;
+  padding: 0 5%;
+}
+.donation-list div ul {
+  list-style-type: none;
+}
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.select-city {
+  border: solid 1px #01529c;
+  width: 100%;
+  max-width: 100px;
+}
+.select-city a {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+}
+.select-city,
+.weather-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 5%;
+  margin: 10px 5%;
+}
 i {
   border: solid #01529c;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+  margin-left: 15%;
+}
+.weather-box {
+  width: 100%;
+  max-width: 200px;
+}
+.weather-box li {
+  padding: 5px 0;
 }
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+.weather-box {
+  border: solid 1px #01529c;
+}
+.weather-box ul {
+  list-style-type: none;
 }
 #sub-title {
   width: 83%;
@@ -363,21 +451,6 @@ i {
 }
 .volunteering {
   padding-bottom: 10px;
-}
-#vol-img-1 {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-#vol-img-2 {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-#vol-img-3 {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
 }
 .volunteering img {
   margin: 0 auto;
@@ -473,6 +546,11 @@ i {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+}
+@media (min-width: 750px) {
+  .donating {
+    padding: 0;
   }
 }
 @media (min-width: 768px) {
