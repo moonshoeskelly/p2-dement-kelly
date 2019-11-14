@@ -16,15 +16,7 @@ var slideOutAd = document.getElementById('slideout-ad');
 
 //-----------------SLIDE OUT AD--------------------//
 
-// slide out after 3 seconds
-// function sideAd () {
-//   slideOutAd.classList.remove('hide');
-//   slideOutAd.classList.add('show');
-// };
-//
-// h3.addEventListener('click', sideAd);
 
-//Open and close sign
 var slideoutHeader = document.getElementById("slideout-header");
 
 function expandSlideoutDescription () {
