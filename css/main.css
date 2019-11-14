@@ -157,26 +157,41 @@ h1 {
   display: block;
 }
 #slideout-ad {
-  height: 200px;
-  max-width: 320px;
+  height: 250px;
+  max-width: 500px;
   background-color: #efefef;
-  text-align: center;
-  text-transform: uppercase;
   position: absolute;
   right: 0;
   bottom: 36px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 2%;
+}
+.slideout-description {
+  width: 0px;
+  overflow: hidden;
+  text-align: left;
+  padding: 10px 2% !important;
 }
 .show {
-  width: 100%;
-  padding: 16px;
-  border: 2px solid #11a57c;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+  width: 300px;
 }
-.hide {
-  width: 0;
-  padding: 0;
-  border: 0;
+#slideout-header {
+  width: 161px;
+  /* Abs positioning makes it not take up vert space */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Rotate from top left corner (not default) */
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
 }
 header p {
   padding: 5px 8%;
@@ -400,13 +415,6 @@ h2 {
   padding: 10px 5%;
   margin: 10px 5%;
 }
-i {
-  border: solid #01529c;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin-left: 15%;
-}
 .weather-box {
   width: 100%;
   max-width: 200px;
@@ -416,10 +424,6 @@ i {
 }
 .weather-box li span {
   color: #01529c;
-}
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
 }
 .weather-box {
   border: solid 1px #01529c;

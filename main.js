@@ -24,7 +24,21 @@ var slideOutAd = document.getElementById('slideout-ad');
 //
 // h3.addEventListener('click', sideAd);
 
+//Open and close sign
+var slideoutHeader = document.getElementById("slideout-header");
 
+function expandSlideoutDescription () {
+ var slideoutDescription = document.getElementsByClassName("slideout-description")[0];
+
+  if (slideoutDescription.classList.contains("show")) {
+    slideoutDescription.classList.remove("show");
+  } else {
+    slideoutDescription.classList.add("show");
+  }
+}
+
+//Add cick event listener for slideout header
+slideoutHeader.addEventListener('click', expandSlideoutDescription);
 
 
 //------------------ACCORDION---------------------//
@@ -69,6 +83,7 @@ for (i=0; i<accordionHeaders.length; i++) {
 
 
 //-----------------------WEATHER API--------------------------//
+
 //Creating a variable
 var xmlhttp = new XMLHttpRequest();
 
@@ -82,31 +97,39 @@ xmlhttp.onreadystatechange = function() {
         var apiResult = JSON.parse(this.responseText);
         console.log(apiResult.list);
 
-        //Print the city name after city
-        var cityName = document.createTextNode(apiResult.list[0].name);
-        console.log(cityName);
+        //Grabbed select dropdown menu
+        var selectMenu = document.querySelector('.select-city select');
 
+        //Initialize city index as 0 on page load
+        var selectedCity = 0;
+
+        //Every time we change a city, do everything inside of this event
+        function changeCityData () {
+
+          //Reset selected city
+          selectedCity = selectMenu.selectedIndex;
+
+          //Print the city name after city
         var addCity = document.querySelectorAll(".weather-box ul li p .city");
 
-        addCity[0].appendChild(cityName);
+          addCity[0].innerHTML = apiResult.list[selectedCity].name;
 
-        //Print the temperature after temp
-        var weatherNow = document.createTextNode(apiResult.list[0].main.temp * 1.8 + 32);
+          //Print the temperature after temp
+          var addWeather = document.querySelectorAll(".weather-box ul li p .temp");
 
-        var addWeather = document.querySelectorAll(".weather-box ul li p .temp");
+          addWeather[0].innerHTML = apiResult.list[selectedCity].main.temp * 1.8 + 32;
 
-        addWeather[0].appendChild(weatherNow);
+          //Print the forecast after forecast
+          var addForecast = document.querySelectorAll(".weather-box ul li p .forecast");
 
-        //Print the forecast after forecast
-        var forecastNow = document.createTextNode(apiResult.list[0].weather[0].description);
-
-        var addForecast = document.querySelectorAll(".weather-box ul li p .forecast");
-
-        addForecast[0].appendChild(forecastNow);
+          addForecast[0].innerHTML = apiResult.list[selectedCity].weather[0].description;
+        }
+        changeCityData ();
+        selectMenu.addEventListener('change', changeCityData);
     }
 };
 
-xmlhttp.open('GET', 'http://api.openweathermap.org/data/2.5/group?id=4167147,4151316,4151352,4152872,4153146,4160983,4161438,4161580,4769125,4163971,4167499,4169156,4172086,4171563,4174757&units=metric&APPID=5de99fc26970f292b395ed118a306040', true);
+xmlhttp.open('GET', 'http://api.openweathermap.org/data/2.5/group?id=4167147,4151316,4151352,4152872,4153146,4160983,4161438,4161580,4161771,4163971,4167499,4169156,4172086,4171563,4174757&units=metric&APPID=5de99fc26970f292b395ed118a306040', true);
 xmlhttp.send();
 
 // "id": 4167147,
@@ -153,7 +176,3 @@ xmlhttp.send();
 //
 // "id": 4174757,
 // "name": "Tampa",
-
-// 4167147,4151316,4151352,4152872,4153146,4160983,4161438,4161580,4769125,4163971,4167499,4169156,4172086,4171563,4174757
-//
-// http://api.openweathermap.org/data/2.5/group?id=4167147,4151316,4151352,4152872,4153146,4160983,4161438,4161580,4769125,4163971,4167499,4169156,4172086,4171563,4174757&APPID=5de99fc26970f292b395ed118a306040
