@@ -118,6 +118,8 @@
   height: 340px;
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
+  z-index: 100;
+  background-color: #fff;
 }
 a {
   text-decoration: none;
@@ -142,6 +144,61 @@ footer {
 footer p {
   font-size: .8rem;
 }
+#slideout-ad {
+  height: 250px;
+  max-width: 300px;
+  position: absolute;
+  right: -2px;
+  top: 207px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 2% 10px 0%;
+  border: 2px solid #3d93d0;
+  background-color: #01529c;
+  z-index: 99;
+}
+.slideout-description {
+  width: 0px;
+  overflow: hidden;
+  text-align: left;
+  padding: 10px 2% !important;
+  color: white;
+}
+.show {
+  width: 100%;
+  max-width: 245px;
+  right: 0px;
+}
+#slideout-header {
+  width: 250px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  background-color: #01529c;
+  color: #fff;
+  padding: 0px 10px 5px 10px;
+  border: 2px solid #3d93d0;
+  border-radius: 0px 0px 5px 5px;
+  border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 h1 {
   font-family: futura-pt-condensed, sans-serif;
   font-weight: 500;
@@ -156,45 +213,8 @@ h1 {
   margin: 0 auto 6px;
   display: block;
 }
-#slideout-ad {
-  height: 250px;
-  max-width: 500px;
-  background-color: #efefef;
-  position: absolute;
-  right: 0;
-  bottom: 36px;
-  font-family: futura-pt, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 10px 2%;
-}
-.slideout-description {
-  width: 0px;
-  overflow: hidden;
-  text-align: left;
-  padding: 10px 2% !important;
-}
-.show {
-  width: 300px;
-}
-#slideout-header {
-  width: 161px;
-  /* Abs positioning makes it not take up vert space */
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* Rotate from top left corner (not default) */
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-}
 header p {
-  padding: 5px 8%;
+  padding: 5px 15%;
   text-align: center;
 }
 .main-contents {
@@ -253,94 +273,6 @@ h2 {
   font-style: normal;
   margin-bottom: 10px;
   font-size: 1.6rem;
-}
-@media (min-width: 475px) {
-  #logos {
-    margin: 10px 0 0 3%;
-  }
-  #main-logo {
-    max-width: 90px;
-  }
-  #cf-logo {
-    max-width: 150px;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  .line {
-    margin: 20px 15%;
-  }
-  .mission,
-  header p {
-    padding: 5px 12%;
-  }
-}
-@media (min-width: 568px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-}
-@media (min-width: 687px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-  .main-donate,
-  .main-volunteer,
-  .main-locations {
-    margin: 10px 3% 0;
-  }
-}
-@media (min-width: 723px) {
-  .menu {
-    height: auto;
-    width: 385px;
-  }
-  .menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .menu ul li {
-    width: 20%;
-    margin: 0;
-    border-bottom: none;
-    border-left: 1px solid black;
-    height: 25px;
-    font-size: 1rem;
-    padding: 0 11px;
-  }
-  #hamburger {
-    display: none;
-  }
-  h1 {
-    font-size: 2.6rem;
-  }
-  h2 {
-    font-size: 1.9rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .line {
-    margin: 20px 20%;
-  }
-  .mission,
-  header p {
-    padding: 5px 23%;
-  }
-}
-@media (min-width: 830px) {
-  .menu {
-    width: 430px;
-  }
-  .menu ul li {
-    width: 20%;
-    height: 25px;
-    font-size: 1.3rem;
-  }
 }
 .donating {
   padding: 5px 1%;
@@ -527,6 +459,30 @@ h2 {
   -webkit-transition: height 2s;
   transition: height 2s;
 }
+@media (min-width: 475px) {
+  #logos {
+    margin: 10px 0 0 3%;
+  }
+  #main-logo {
+    max-width: 90px;
+  }
+  #cf-logo {
+    max-width: 150px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  .line {
+    margin: 20px 15%;
+  }
+  .mission,
+  header p {
+    padding: 5px 12%;
+  }
+}
 @media (min-width: 530px) {
   #vol-img-2 {
     -webkit-box-ordinal-group: 4;
@@ -537,6 +493,63 @@ h2 {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .show {
+    max-width: 300px;
+  }
+}
+@media (min-width: 568px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 687px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  .main-donate,
+  .main-volunteer,
+  .main-locations {
+    margin: 10px 3% 0;
+  }
+}
+@media (min-width: 723px) {
+  .menu {
+    height: auto;
+    width: 385px;
+  }
+  .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu ul li {
+    width: 20%;
+    margin: 0;
+    border-bottom: none;
+    border-left: 1px solid black;
+    height: 25px;
+    font-size: 1rem;
+    padding: 0 11px;
+  }
+  #hamburger {
+    display: none;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .line {
+    margin: 20px 20%;
+  }
+  .mission,
+  header p {
+    padding: 5px 23%;
   }
 }
 @media (min-width: 740px) {
@@ -564,6 +577,16 @@ h2 {
     width: 60%;
   }
   .accordion-headers h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 830px) {
+  .menu {
+    width: 430px;
+  }
+  .menu ul li {
+    width: 20%;
+    height: 25px;
     font-size: 1.3rem;
   }
 }

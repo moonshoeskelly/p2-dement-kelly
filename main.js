@@ -29,11 +29,14 @@ var slideoutHeader = document.getElementById("slideout-header");
 
 function expandSlideoutDescription () {
  var slideoutDescription = document.getElementsByClassName("slideout-description")[0];
+ var toggleArrow = this.childNodes[1];
 
   if (slideoutDescription.classList.contains("show")) {
     slideoutDescription.classList.remove("show");
+    toggleArrow.innerHTML = '&#x21e9;';
   } else {
     slideoutDescription.classList.add("show");
+    toggleArrow.innerHTML = '&#x21e7';
   }
 }
 
