@@ -75,7 +75,7 @@
   width: 91px;
   height: 59px;
   font-size: 35px;
-  color: #000;
+  color: @black;
 }
 
 .menu {
@@ -96,7 +96,7 @@
         .futura-book;
       }
       a {
-        color: #000;
+        color: @black;
       }
     }
   }
@@ -125,13 +125,13 @@ a {
 
 p {
   .futura-book;
-  color: #595959;
+  color: @grey;
   font-size: .9rem;
   line-height: 17px;
 }
 
 .line {
-  border-top: 2.5px solid #3d93d0;
+  border-top: 2.5px solid @light-blue;
   margin: 20px 20%;
 }
 
@@ -158,8 +158,8 @@ footer {
   top: 207px;
   .futura-book;
   padding: 10px 2% 10px 0%;
-  border: 2px solid #3d93d0;
-  background-color: #01529c;
+  border: 2px solid @light-blue;
+  background-color: @blue;
   z-index: 99;
 }
 
@@ -172,7 +172,7 @@ footer {
   overflow: hidden;
   text-align: left;
   padding: 10px 2% !important;
-  color: white;
+  color: @soft-white;
 }
 
 .show {
@@ -194,10 +194,10 @@ footer {
   -moz-transform:    rotate(90deg);
   -ms-transform:     rotate(90deg);
   -o-transform:      rotate(90deg);
-  background-color: #01529c;
-  color: #fff;
+  background-color: @blue;
+  color: @soft-white;
   padding: 0px 10px 5px 10px;
-  border: 2px solid #3d93d0;
+  border: 2px solid @light-blue;
   border-radius: 0px 0px 5px 5px;
   border-top-style: none;
   border-right-style: solid;
@@ -206,7 +206,6 @@ footer {
   letter-spacing: 1px;
   display: flex;
   justify-content: space-around;
-
 }
 
 
@@ -251,9 +250,9 @@ header p {
 }
 
 .button {
-  border: 2px solid #3d93d0;
-  background-color: #01529c;
-  color: white;
+  border: 2px solid @light-blue;
+  background-color: @blue;
+  color: @soft-white;
   .futura-light;
   font-size: 1.5rem;
   padding: 4px 15%;
@@ -289,7 +288,7 @@ h2 {
 }
 
 #don-main-h2 {
-  color: #595959;
+  color: @grey;
   max-width: 630px;
   margin: 0 auto;
   .futura-condensed-medium;
@@ -309,7 +308,7 @@ h2 {
     width: 100%;
     max-width: 350px;
     .futura-light;
-    color: #595959;
+    color: @grey;
     margin: 10px 1%;
     padding: 0 5%;
     ul {
@@ -326,7 +325,7 @@ h2 {
 }
 
 .select-city {
-  border: solid 1px #01529c;
+  border: solid 1px @blue;
   width: 100%;
   max-width: 100px;
   select {
@@ -348,13 +347,13 @@ h2 {
   li {
     padding: 5px 0;
     span {
-      color: #01529c;
+      color: @blue;
     }
   }
 }
 
 .weather-box {
-  border: solid 1px #01529c;
+  border: solid 1px @blue;
   ul {
     list-style-type: none;
   }
@@ -382,13 +381,12 @@ h2 {
 
 .volunteering {
   padding-bottom: 10px;
-}
-
-.volunteering img {
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
-  padding: 0 5px 0 5px;
+  img {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    padding: 0 5px 0 5px;
+  }
 }
 
 .long-img {
@@ -401,7 +399,7 @@ h2 {
 
 
 #vol-main-h2 {
-  color: #595959;
+  color: @grey;
   width: 83%;
   max-width: 630px;
   margin: 0 auto;
@@ -418,27 +416,25 @@ h2 {
   display: flex;
   align-items: center;
   margin: 10px auto;
-  color: #595959;
+  color: @grey;
   padding: 0 20px;
-}
-
-.accordion-headers h3{
-  font-size: 1.2rem;
-  padding-left: 5%;
-  .futura-light;
-
+  h3{
+    font-size: 1.2rem;
+    padding-left: 5%;
+    .futura-light;
+  }
 }
 
 .toggle-indicator {
   font-size: 2.5rem;
-  color: #01529c;
+  color: @blue;
 }
 
 .accordion-description {
   height: 0;
   overflow: hidden;
   padding: 0px 20px;
-  color: #595959;
+  color: @grey;
   transition: height 1s;
   .futura-light;
   line-height: 28px;
@@ -509,18 +505,18 @@ h2 {
   .menu {
     height: auto;
     width: 385px;
-  }
-  .menu ul {
-    display: flex;
-  }
-  .menu ul li {
-    width: 20%;
-    margin: 0;
-    border-bottom: none;
-    border-left: 1px solid black;
-    height: 25px;
-    font-size: 1rem;
-    padding: 0 11px;
+    ul {
+      display: flex;
+      li {
+        width: 20%;
+        margin: 0;
+        border-bottom: none;
+        border-left: 1px solid black;
+        height: 25px;
+        font-size: 1rem;
+        padding: 0 11px;
+      }
+    }
   }
   #hamburger {
     display: none;
@@ -572,10 +568,10 @@ h2 {
 @media (min-width: 830px) {
   .menu {
     width: 430px;
-  }
-  .menu ul li {
-    width: 20%;
-    height: 25px;
-    font-size: 1.3rem;
+    ul li {
+      width: 20%;
+      height: 25px;
+      font-size: 1.3rem;
+    }
   }
 }
