@@ -5,17 +5,25 @@ var navMenu = document.querySelector('.menu');
 
 function toggleMenu() {
   navMenu.classList.toggle('show-mobile-menu');
+
+  //Move ad down when hamburger menu expands
+  var slideoutAd = document.querySelector('#slideout-ad');
+  console.log (slideoutAd);
+
+  if (navMenu.classList.contains('show-mobile-menu')) {
+    slideoutAd.style.top = "360px";
+  }
+  else {
+    slideoutAd.style.top = "207px";
+  }
 }
 
 hamburgerButton.addEventListener('click', toggleMenu);
 
 
-var slideOutAd = document.getElementById('slideout-ad');
-
 
 
 //-----------------SLIDE OUT AD--------------------//
-
 
 var slideoutHeader = document.getElementById("slideout-header");
 
@@ -34,6 +42,7 @@ function expandSlideoutDescription () {
 
 //Add cick event listener for slideout header
 slideoutHeader.addEventListener('click', expandSlideoutDescription);
+
 
 
 //------------------ACCORDION---------------------//
