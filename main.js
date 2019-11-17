@@ -22,29 +22,6 @@ hamburgerButton.addEventListener('click', toggleMenu);
 
 
 
-
-//-----------------SLIDE OUT AD--------------------//
-
-var slideoutHeader = document.getElementById("slideout-header");
-
-function expandSlideoutDescription () {
- var slideoutDescription = document.getElementsByClassName("slideout-description")[0];
- var toggleArrow = this.childNodes[1];
-
-  if (slideoutDescription.classList.contains("show")) {
-    slideoutDescription.classList.remove("show");
-    toggleArrow.innerHTML = '&#x21e9;';
-  } else {
-    slideoutDescription.classList.add("show");
-    toggleArrow.innerHTML = '&#x21e7';
-  }
-}
-
-//Add cick event listener for slideout header
-slideoutHeader.addEventListener('click', expandSlideoutDescription);
-
-
-
 //------------------ACCORDION---------------------//
 
 //Open and close sign
@@ -99,7 +76,6 @@ xmlhttp.onreadystatechange = function() {
 
         // Storing API object inside of apiresult
         var apiResult = JSON.parse(this.responseText);
-        console.log(apiResult.list);
 
         //Grabbed select dropdown menu
         var selectMenu = document.querySelector('.select-city select');
@@ -180,3 +156,25 @@ xmlhttp.send();
 //
 // "id": 4174757,
 // "name": "Tampa",
+
+
+
+//-----------------SLIDE OUT AD--------------------//
+
+var slideoutHeader = document.getElementById("slideout-header");
+
+function expandSlideoutDescription () {
+ var slideoutDescription = document.getElementsByClassName("slideout-description")[0];
+ var toggleArrow = this.childNodes[1];
+
+  if (slideoutDescription.classList.contains("show")) {
+    slideoutDescription.classList.remove("show");
+    toggleArrow.innerHTML = '&#x21e9;';
+  } else {
+    slideoutDescription.classList.add("show");
+    toggleArrow.innerHTML = '&#x21e7';
+  }
+}
+
+//Add cick event listener for slideout header
+slideoutHeader.addEventListener('click', expandSlideoutDescription);
